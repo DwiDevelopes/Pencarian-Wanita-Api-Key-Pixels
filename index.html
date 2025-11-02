@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencarian Gambar & Video Wanita - Pixels API</title>
+<link rel = "stylesheet" href = "css.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i>👩</i> Pencarian Wanita
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#gambar">Gambar</a></li>
+                        <li><a href="#video">Video</a></li>
+                        <li><a href="#tentang">Tentang</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-type">
+                    <button class="search-type-btn active" data-type="photos">Gambar</button>
+                    <button class="search-type-btn" data-type="videos">Video</button>
+                </div>
+                
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Cari gambar atau video wanita...">
+                    <button id="search-btn">Cari</button>
+                </div>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="orientation">Orientasi</label>
+                        <select id="orientation">
+                            <option value="">Semua</option>
+                            <option value="landscape">Landscape</option>
+                            <option value="portrait">Portrait</option>
+                            <option value="square">Square</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="size">Ukuran</label>
+                        <select id="size">
+                            <option value="">Semua</option>
+                            <option value="large">Besar</option>
+                            <option value="medium">Sedang</option>
+                            <option value="small">Kecil</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="color">Warna</label>
+                        <select id="color">
+                            <option value="">Semua</option>
+                            <option value="red">Merah</option>
+                            <option value="orange">Oranye</option>
+                            <option value="yellow">Kuning</option>
+                            <option value="green">Hijau</option>
+                            <option value="blue">Biru</option>
+                            <option value="purple">Ungu</option>
+                            <option value="pink">Pink</option>
+                            <option value="black">Hitam</option>
+                            <option value="white">Putih</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="sort">Urutkan</label>
+                        <select id="sort">
+                            <option value="popular">Populer</option>
+                            <option value="latest">Terbaru</option>
+                            <option value="relevant">Relevan</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="results-section">
+        <div class="container">
+            <div class="results-header">
+                <h2 id="results-title">Gambar Wanita</h2>
+                <div class="results-count" id="results-count">0 hasil ditemukan</div>
+            </div>
+            
+            <div class="loading" id="loading">
+                <div class="loading-spinner"></div>
+                <p>Memuat hasil...</p>
+            </div>
+            
+            <div class="error-message" id="error-message"></div>
+            
+            <div class="results-grid" id="results-grid">
+                <!-- Hasil pencarian akan ditampilkan di sini -->
+            </div>
+            
+            <div class="pagination" id="pagination">
+                <!-- Tombol pagination akan ditampilkan di sini -->
+            </div>
+        </div>
+    </section>
+    
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <img id="modal-image" class="modal-image" src="" alt="">
+            <video id="modal-video" class="modal-video" controls style="display: none;"></video>
+            <div class="modal-info" id="modal-info"></div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tentang Kami</h3>
+                    <p>Platform pencarian gambar dan video wanita berkualitas tinggi menggunakan Pixels API.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Link Cepat</h3>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#gambar">Gambar</a></li>
+                        <li><a href="#video">Video</a></li>
+                        <li><a href="#tentang">Tentang Kami</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li>Email: info@example.com</li>
+                        <li>Telepon: +62 123 4567 890</li>
+                        <li>Alamat: Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+<script src = "js.js"></script>
+            
+            <div class="copyright">
+                &copy; 2023 Pencarian Wanita. Semua hak dilindungi.
+            </div>
+        </div>
+    </footer>
